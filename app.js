@@ -5,8 +5,8 @@ app.set('view engine', 'ejs')
 
 app.use(express.static("public"))
 
-app.listen(3000, ()=>{
-    console.log("Servidor en puerto 3000")
-})
+app.listen(process.env.PORT||3000, function() {
+    console.log('Servidor funcionando');
+});
 
 app.use("/",rutasMain )
